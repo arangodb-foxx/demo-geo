@@ -3,7 +3,8 @@ A minimalistic Foxx geo example using leaflet.js
 
 # Preparations
 
-To use the foxx service, please import the needed datasets from `data` folder.
+First install the foxx service. Then import the needed datasets from `data` folder.
+
 ```
 ./arangoimp restaurants.json --collection restaurants
 ./arangoimp neighborhoods.json --collection neighborhoods
