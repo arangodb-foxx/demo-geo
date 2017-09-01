@@ -1,5 +1,6 @@
 # demo-geo
 A minimalistic Foxx geo example using leaflet.js
+![Alt text](/images/geo-screenshot.png?raw=true "Data via Foxx shown via leaflet.js")
 
 # Preparations
 
