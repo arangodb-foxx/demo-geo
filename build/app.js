@@ -90,7 +90,6 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
           .bindPopup('Name: ' + obj.name + '.<br>Id: ' + obj._id)
           .openPopup();
           markers.push(marker);
-          centerLeafletMapOnMarker(marker);
         });
       },
       error: function (data) {

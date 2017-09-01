@@ -80,7 +80,6 @@
           .bindPopup('Name: ' + obj.name + '.<br>Id: ' + obj._id)
           .openPopup();
           markers.push(marker);
-          centerLeafletMapOnMarker(marker);
         });
       },
       error: function (data) {
