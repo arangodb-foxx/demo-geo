@@ -26,9 +26,9 @@ router.get('/restaurants', function (req, res) {
     res.throw(404, 'The entry does not exist', e);
   }
 })
-.response(joi.object().required(), 'Entry stored in the collection.')
-.summary('Retrieve an entry')
-.description('Retrieves an entry from the "myFoxxCollection" collection by key.');
+.response(joi.object().required(), 'Returns a random entry.')
+.summary('Retrieve a random restaurant entry.')
+.description('Returns a random restaurant entry of the restaurants collection.');
 
 router.get('/neighborhoods', function (req, res) {
   try {
@@ -42,9 +42,9 @@ router.get('/neighborhoods', function (req, res) {
     res.throw(404, 'The entry does not exist', e);
   }
 })
-.response(joi.object().required(), 'Entry stored in the collection.')
-.summary('Retrieve an entry')
-.description('Retrieves an entry from the "myFoxxCollection" collection by key.');
+.response(joi.object().required(), 'Returns a random entry.')
+.summary('Retrieve a random neighborhood entry.')
+.description('Returns a random neighborhoods entry of the neighborhoods collection.');
 
 router.get('/pointsInNeighborhood/:id', function (req, res) {
   try {
@@ -64,6 +64,6 @@ router.get('/pointsInNeighborhood/:id', function (req, res) {
     res.throw(404, 'The entry does not exist', e);
   }
 })
-.response(joi.object().required(), 'Entry stored in the collection.')
-.summary('Retrieve an entry')
-.description('Retrieves an entry from the "myFoxxCollection" collection by key.');
+.response(joi.object().required(), 'Returns restaurants within a given neighborhood.')
+.summary('Restaurants in a neighborhood.')
+.description('Returns restaurants within a given neighborhood.');
