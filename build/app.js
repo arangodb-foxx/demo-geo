@@ -36,6 +36,7 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
         .bindPopup('Name: ' + data.name + '.<br>Id: ' + data._id)
         .openPopup();
         markers.push(marker);
+        centerLeafletMapOnMarker(marker);
       },
       error: function (data) {
         console.log(data);
@@ -89,12 +90,19 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
           .bindPopup('Name: ' + obj.name + '.<br>Id: ' + obj._id)
           .openPopup();
           markers.push(marker);
+          centerLeafletMapOnMarker(marker);
         });
       },
       error: function (data) {
         console.log(data);
       }
     });
+  };
+
+  var centerLeafletMapOnMarker = function (marker) {
+    var latLngs = [ marker.getLatLng() ];
+    var markerBounds = L.latLngBounds(latLngs);
+    map.fitBounds(markerBounds);
   };
 
   var clearMarkers = function () {
